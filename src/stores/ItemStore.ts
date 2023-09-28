@@ -7,16 +7,21 @@ type Item = {
 
 interface ItemStore {
     items: Item[]
+    getItem: (id: number) => Item | undefined
     createItem: (item: Item) => Item
     updateItem: (item: Item) => Item
     deleteItem: (item: Item) => Item
 }
 
-const useItemStore = create<ItemStore>()((set) => ({
+const useItemStore = create<ItemStore>()((set, get) => ({
     items: [],
     createItem: (item: Item) => {
         set((state) => ({items: [...state.items, item]}));
         return item
+    },
+
+    getItem: (id: number) => {
+        return get().items.find(item => item.id === id)
     },
 
     updateItem: (item: Item) => {
