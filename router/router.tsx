@@ -5,11 +5,11 @@ import ItemPage, {itemLoader} from "../src/routes/items/item";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <RootPage />,
+        element: <RootPage/>,
     },
     {
         path: 'items/:itemId',
-        element: <ItemPage />,
+        element: <ItemPage/>,
         loader: itemLoader,
     }
 ]);
