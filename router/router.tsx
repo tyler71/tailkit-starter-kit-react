@@ -1,7 +1,7 @@
 import {createBrowserRouter} from "react-router-dom";
 import RootPage from "../src/routes/root/root";
 import ItemPage, {itemLoader} from "../src/routes/items/item";
-import RootLayout from "../src/routes/root/Components/RootLayout";
+import RootLayout from "../src/RootLayout";
 
 const router = createBrowserRouter([
     {

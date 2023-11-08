@@ -50,9 +50,9 @@ function RootPage() {
                     </a>{" "}
                     to start copying over your layout and components!
                 </p>
-                <button  type="button" className="mt-2 inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-4 py-2 leading-6 border-primary-700 bg-primary-700 text-white hover:text-white hover:bg-primary-600 hover:border-primary-600 focus:ring focus:ring-primary-400 focus:ring-opacity-50 active:bg-primary-700 active:border-primary-700 dark:focus:ring-primary-400 dark:focus:ring-opacity-90">
-                    <span>{items.length === 1 ? `${items.length} ${ITEM_NAME}` : `${items.length} ${ITEM_NAME}s`}</span>
-                    <svg onClick={() => {createItem({id: itemCount, name: "demo"}); setItemCount(itemCount + 1)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <button type="button" className="mt-2 inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-4 py-2 leading-6 border-primary-700 bg-primary-700 text-white hover:text-white hover:bg-primary-600 hover:border-primary-600 focus:ring focus:ring-primary-400 focus:ring-opacity-50 active:bg-primary-700 active:border-primary-700 dark:focus:ring-primary-400 dark:focus:ring-opacity-90">
+                    <span className={"text-black dark:text-white"}>{items.length === 1 ? `${items.length} ${ITEM_NAME}` : `${items.length} ${ITEM_NAME}s`}</span>
+                    <svg onClick={() => {createItem({id: itemCount, name: "demo"}); setItemCount(itemCount + 1)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="dark:text-white text-black w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
                 </button>
